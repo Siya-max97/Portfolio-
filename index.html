@@ -25,8 +25,6 @@
       </div>
       <button class="button-85" id="toggleButton">
         About Me
-
-
       <div id="bioCard" class="hidden">
         <p> Join me on my journey of web development, where I'm crafting digital experiences that blend creativity and code.
             where i am constantly learning and seeking knowledge so i can master application building,
@@ -82,16 +80,20 @@
           </p>
         </footer>
         <script>
-          const toggleButton = document.getElementById("toggleButton");
-          const bioCard = document.getElementById("bioCard");
+         const toggleButton = document.getElementById("toggleButton");
+    const bioCard = document.getElementById("bioCard");
 
-          toggleButton.addEventListener("click", function() {
-            if (bioCard.style.display === "none" || bioCard.style.display === "") {
-              bioCard.style.display = "block";
-            } else {
-              bioCard.style.display = "none";
-            }
-          });
+    // Initially, hide the card when the page loads
+    bioCard.style.display = "none";
+
+    toggleButton.addEventListener("click", function(e) {
+      e.preventDefault(); // Prevent the default button behavior (form submission, link following)
+      if (bioCard.style.display === "none" || bioCard.style.display === "") {
+        bioCard.style.display = "block";
+      } else {
+        bioCard.style.display = "none";
+      }
+    });
         </script>
   </body>
 </html>
