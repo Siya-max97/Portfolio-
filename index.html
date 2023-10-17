@@ -23,15 +23,31 @@
       <div class="typed-out">
         <p>Aspiring Multimedia Designer</p>
       </div>
-      <div class="container-fluid">
-        <button class="button-85">
-          Contact </button>
+      <button class="button-85" id="toggleButton">
+        About Me
+
+
+      <div id="bioCard" class="hidden">
+        <p> Join me on my journey of web development, where I'm crafting digital experiences that blend creativity and code.
+            where i am constantly learning and seeking knowledge so i can master application building,
+          🎥 With a background in Motion Pictures, I've gained an understanding of the art of storytelling. Now, I'm leveraging that skill to create visually captivating websites that engage and inform.
+
+          🎨 Visual communication is my passion. From pixels to layouts, I'm dedicated to conveying messages through design. Let's reshape how we share ideas.
+
+          🚀 My future is in coding and multimedia design. I'm harmonizing technical prowess from web development with an artistic eye to craft multimedia experiences that leave an impact.
+
+          Connect with me as we explore the crossroads of tech and art, and shape the future of digital storytelling!
+
+          #WebAppDeveloper #VisualCommunication #MultimediaDesign #AFDA_Alumni #LeWagonAlumni
+
+          </p></button>
+      </div>
         <br>
         <button class="button-85">
           <a href="http://www.achievo.me/">Projects
         </button></a>
       </div>
-      <div class="skills">
+      <div class="skills" id="hover-effect">
         <h6>Skills</h6>
         <ul>
           <li><i class="fas fa-code"></i> Ruby</li>
@@ -65,7 +81,17 @@
             <h6>by Siya Labase</h6>
           </p>
         </footer>
+        <script>
+          const toggleButton = document.getElementById("toggleButton");
+          const bioCard = document.getElementById("bioCard");
 
-      <script src="scripts.js"></script>
+          toggleButton.addEventListener("click", function() {
+            if (bioCard.style.display === "none" || bioCard.style.display === "") {
+              bioCard.style.display = "block";
+            } else {
+              bioCard.style.display = "none";
+            }
+          });
+        </script>
   </body>
 </html>

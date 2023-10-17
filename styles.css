@@ -31,7 +31,7 @@ body::before {
 }
 
 h3 {
-  color:#B1CF5F;
+  color:navajowhite;
 	margin: 10px 0;
   font-size:30px;
 }
@@ -126,7 +126,17 @@ display: inline-block;
 	font-size: 12px;
 	margin: 0 7px 7px 0;
 	padding: 16px;
+  
+    #hover-effect {
+      color: #ff7676; /* Initial text color */
+      transition: color 0.3s; /* Add a smooth transition effect */
+    }
+
+    #hover-effect:hover {
+      color: rgb(252, 111, 111); /* Text color on hover */
+    }
 }
+
 .button-85 {
   margin: 10px; /* Add spacing around the buttons */
 }
@@ -134,8 +144,8 @@ display: inline-block;
     padding: 0.6em 2em;
     border: none;
     outline: none;
-    color: rgb(255, 255, 255);
-    background: #111;
+    color: navajowhite;
+    background: #11111100;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -161,14 +171,18 @@ display: inline-block;
     filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    border-radius: 10px;
     -webkit-animation: glowing-button-85 20s linear infinite;
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
     animation: glowing-button-85 20s linear infinite;
     transition: opacity 0.3s ease-in-out;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
 }
 
   @keyframes glowing-button-85 {
@@ -246,4 +260,12 @@ footer{
 a{
   text-decoration:none;
   color:navajowhite;
+}
+.bio-card {
+  display: none;
+  background-color: #f0f0f05b;
+  padding: 20px;
+  border: 1px solid navajowhite;
+  margin-top: 10px;
+  width: 300px;
 }
